@@ -14,7 +14,7 @@ public class WinEffect : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy1"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             particles[0].Play();
         }

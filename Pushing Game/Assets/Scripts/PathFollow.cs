@@ -68,8 +68,8 @@ public class PathFollow : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Rigidbody PlayerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
-            PlayerRigidbody.AddForce(awayFromPlayer * 50 *Time.deltaTime, ForceMode.Impulse);
+            Vector3 awayFromEnemy2 = collision.gameObject.transform.position - transform.position;
+            PlayerRigidbody.AddForce(awayFromEnemy2 * 50 *Time.deltaTime, ForceMode.Impulse);
         }
         else if (collision.gameObject.CompareTag("Enemy2"))
         {
