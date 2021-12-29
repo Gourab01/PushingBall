@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text coinTexts;
+    public void Setup(int Score)
     {
-        
+        gameObject.SetActive(true);
+        coinTexts.text = Score.ToString() + " COINS";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RestartButton()
     {
-        
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void ExitMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
